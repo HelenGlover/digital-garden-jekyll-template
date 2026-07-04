@@ -22,7 +22,7 @@ This sparked a LinkedIn discussion, and in response, civic tech veteran Joshua T
 
 <blockquote class="quoteback" darkmode="" data-title="Tauberer" data-author=" Joshua" cite="https://www.linkedin.com/pulse/what-actually-happened-civic-tech-joshua-tauberer-ibnbe/">
 <span>
-....I don't want to minimize the problems in civic tech <br>
+....I don't want to minimize the problems in civic tech <br><br>
 This stuff actually worked. We changed how government works, permanently, at multiple levels. There are countless more examples.&nbsp;</span>
 <footer> Joshua<cite> <a href="https://www.linkedin.com/pulse/what-actually-happened-civic-tech-joshua-tauberer-ibnbe/">https://www.linkedin.com/pulse/what-actually-happened-civic-tech-joshua-tauberer-ibnbe/</a></cite></footer>
 </blockquote><script note="" src="https://cdn.jsdelivr.net/gh/Blogger-Peer-Review/quotebacks@1/quoteback.js"></script>
