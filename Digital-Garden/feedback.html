@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Learning in Public Log</title>
+
+<style>
+  :root {
+    --bg: #faf9f7;
+    --text: #1b1b1b;
+    --muted: #6b6b6b;
+    --border: #e6e1d8;
+    --paper: #ffffff;
+    --accent: #2b6cb0;
+    --quote-bg: #eef4fb;
+    --quote-border: #2b6cb0;
+    --quote-text: #1a3d6b;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .sub {
+    margin-top: 0.5rem;
+    color: var(--text);
+    font-size: 18px;
+    max-width: 1000px;
+    line-height: 1.75;
+  }
+
+  .meta {
+    margin-top: 0.75rem;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .feed {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .feed {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .entry {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: 0.15s ease;
+  }
+
+  .entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+  }
+
+  .entry-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 260px;
+    border: 1px solid var(--border);
+  }
+
+  .context {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+
+  .section-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .block {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .feedback-block {
+    background: var(--quote-bg);
+    border-left: 3px solid var(--quote-border);
+    border-radius: 0 8px 8px 0;
+    padding: 0.9rem 1rem;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--quote-text);
+    font-style: italic;
+    position: relative;
+  }
+
+  .feedback-block::before {
+    content: "\201C";
+    font-size: 48px;
+    line-height: 1;
+    color: var(--quote-border);
+    opacity: 0.25;
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    font-family: Georgia, serif;
+    pointer-events: none;
+  }
+
+  .feedback-block .inner {
+    padding-left: 22px;
+  }
+
+  .link {
+    margin-top: 6px;
+  }
+
+  .link a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 15px;
+    border-bottom: 1px solid transparent;
+  }
+
+  .link a:hover {
+    border-bottom: 1px solid var(--accent);
+  }
+
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+    font-size: 18px;
+    color: var(--muted);
+  }
+
+  .loading {
+    padding: 2rem;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+.topbar {
+  height: 7px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #2b6cb0;
+}
+
+.topbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #2b6cb0 0%,
+    #2baabd 15%,
+    #17425e 28%,
+    #37258b 40%,
+    #067461 52%,
+    #2bb06b 65%,
+    #952686 78%,
+    #580c64 88%,
+    #937edd 100%
+  );
+  animation: streak 4s linear infinite;
+}
+
+@keyframes streak {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar"></div>
+
+<header>
+  <h1 style="font-size: 50px">Learning in Public Log</h1>
+
+  <div class="sub">
+    This project is an attempt to make something usually invisible in community organizing visible: feedback.
+    <br><br>
+    The best communities are built by the people who represent them. In many spaces, you
+    give feedback but never see what happens next. Was it used? Was it valued? Did it actually change anything?
+    <br><br>
+In helping run
+<a href="https://civictechdc.org" style="color: var(--accent); text-decoration: none;">Civic Tech DC</a>,
+it has become important to build a community that is also reflective of itself, one where you can see how feedback leads to new processes.
+I share the feedback I have received, my personal thoughts, and the next steps taken, if any.
+<br><br>
+This is an experiment I plan to update over the next few months. You are always welcome to share <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCuUxzN14quNX61_ZL9VecINci_KwOIsY9AAULrVmO79aDEQ/viewform?usp=header" style="color: var(--accent); text-decoration: none;">feedback.</a>
+  <div class="meta" id="meta">
+    Loading…
+  </div>
+</header>
+
+<main class="feed" id="feed">
+  <div class="loading">Loading entries…</div>
+</main>
+
+<footer>
+  Designed by
+  <a href="https://helenyglover.com/" style="color: var(--accent); text-decoration: none;">Helen Glover</a>
+  for
+  <a href="https://civictechdc.org" style="color: var(--accent); text-decoration: none;">Civic Tech DC</a>. Actual Code :)
+</footer>
+
+<script>
+
+const SHEET_URL =
+  "https://opensheet.elk.sh/1P-mowWapPUDG_PXcSa08dXJHY8hUZUI4ng91EO-9ses/CivicTechDC";
+
+let DATA = [];
+
+function normalize(row) {
+  return {
+    context: row.context || "",
+    feedback: row.feedback || "",
+    thoughts: row.thoughts || "",
+    next: row.next || "",
+    link_url: row.link_url || "",
+    link_label: row.link_label || "",
+    image_url: row.image_url || ""
+  };
+}
+
+async function loadData() {
+  const feed = document.getElementById("feed");
+
+  feed.innerHTML = `<div class="loading">Updating…</div>`;
+
+  try {
+    const res = await fetch(SHEET_URL);
+    const raw = await res.json();
+
+    DATA = raw.map(normalize).reverse();
+
+    render();
+
+  } catch (e) {
+    console.error(e);
+    feed.innerHTML = `<div class="loading">Error loading data</div>`;
+  }
+}
+
+function render() {
+  const feed = document.getElementById("feed");
+
+  feed.innerHTML = "";
+
+  document.getElementById("meta").textContent =
+    `${DATA.length} entries · last updated ${new Date().toLocaleTimeString()}`;
+
+  DATA.forEach(d => {
+
+    const el = document.createElement("div");
+    el.className = "entry";
+
+    el.innerHTML = `
+      <div class="context">${d.context}</div>
+
+      ${d.image_url ? `
+        <img
+          src="${d.image_url}"
+          alt=""
+          class="entry-image"
+          onerror="this.style.display='none'"
+        >
+      ` : ""}
+
+      <div>
+        <div class="section-title">Feedback</div>
+        <div class="feedback-block">
+          <div class="inner">${d.feedback.replace(/\n/g, "<br>")}</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">Thoughts</div>
+        <div class="block">${d.thoughts.replace(/\n/g, "<br>")}</div>
+      </div>
+
+      <div>
+        <div class="section-title">Next Steps</div>
+        <div class="block">${d.next.replace(/\n/g, "<br>")}</div>
+      </div>
+
+      ${d.link_url ? `
+        <div class="link">
+          <a href="${d.link_url}" target="_blank">
+            ${d.link_label || "Source"}
+          </a>
+        </div>
+      ` : ""}
+    `;
+
+    feed.appendChild(el);
+
+  });
+}
+
+let lastCount = null;
+
+async function checkForUpdates() {
+  try {
+    const res = await fetch(SHEET_URL);
+    const raw = await res.json();
+    if (raw.length !== lastCount) {
+      lastCount = raw.length;
+      DATA = raw.map(normalize).reverse();
+      render();
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+loadData().then(() => {
+  lastCount = DATA.length;
+  setInterval(checkForUpdates, 30000);
+});
+
+</script>
+
+</body>
+</html>
