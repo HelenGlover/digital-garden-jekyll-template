@@ -34,7 +34,7 @@ A volunteer who works on a transportation project may begin to understand bike s
 
 Given the challenges of civic tech, my friend suggested that volunteer models, which most civic tech entities run on, can actually be a good thing because volunteer is low-barrier, flexible, and less dependent on a single funding stream or administrative structure. I can see a best-case example in Civic Tech DC itself, when it was revived after the Code for America Brigade concluded. In this case, while a volunteer model is tough and requires a delicate balance of structure where needed, it may be that the most important thing is to encourage Civic Tech DC to be a third space where people can contribute with relatively low stakes.
 
-At the same time, we should not romanticize volunteerism. For example, [g0v in Taiwan[(https://g0v.tw/intl/en/) maintains a volunteer community core while also supporting an offshoot nonprofit, the [Open Culture Foundation](https://ocf.tw/en/), which can seek grants and channel resources back into projects. This model preserves the orientation of a volunteer civic tech space while also creating some infrastructure for funding and continuity. Perhaps a similar model could exist for Civic Tech DC.
+At the same time, we should not romanticize volunteerism. For example, the [g0v movement in Taiwan](https://g0v.tw/intl/en/) maintains a volunteer community core while also supporting an offshoot nonprofit, the [Open Culture Foundation](https://ocf.tw/en/), which can seek grants and channel resources back into projects. This model preserves the orientation of a volunteer civic tech space while also creating some infrastructure for funding and continuity. Perhaps a similar model could exist for Civic Tech DC.
 
 #### Takeaways: 
 
