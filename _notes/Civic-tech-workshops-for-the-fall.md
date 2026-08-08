@@ -3,7 +3,7 @@ title: Civic Tech Workshops for the Fall
 labels: 
   - Civic Tech Reflections
 description: A work in progress blog 
-image: 
+image: assets/fall,jpg
 display_date: 2026-08-08
 ---
 The summertime is when Civic Tech DC slows down (a little bit), which offers some breathing room to reflect on what we’ve accomplished and think about what we want to try next.
