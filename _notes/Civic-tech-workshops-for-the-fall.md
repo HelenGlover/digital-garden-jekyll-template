@@ -3,7 +3,7 @@ title: Civic Tech Workshops for the Fall
 labels: 
   - Civic Tech Reflections
 description: A work in progress blog 
-image: assets/fall,jpg
+image: assets/fall.jpg
 display_date: 2026-08-08
 ---
 The summertime is when Civic Tech DC slows down (a little bit), which offers some breathing room to reflect on what we’ve accomplished and think about what we want to try next.
@@ -20,3 +20,7 @@ In the meantime, a couple of projects and ideas that have been inspiring me:
 
 * [Smol Gardens — A Civic Builder's Guide to Accountable Tech](https://smolgardens.site/?utm_source=chatgpt.com)
 * [Civic AI — 6-Pack of Care](https://civic.ai/)
+
+Also want to do a "civic tech failures" event which can be something like this 
+
+[Discontinued Civic Tech Workshop Communitiy](https://discontinued-civictech.github.io/index)
